@@ -1,0 +1,22 @@
+api:
+  url: http://api.test.loc/test.php
+  method: post
+  params:
+    k1: "v1"
+    k2: "v2"
+    k3: "v3"
+  token:
+    "token": "abc"
+concurrency: 20
+debug: false
+log:
+  writers: file,stdout
+  logger_level: DEBUG
+  logger_file: log/server.log
+  resty_file: log/resty.log
+  error_file: log/error.log
+  log_format_text: false
+  rollingPolicy: daily
+  log_rotate_date: 1
+  log_rotate_size: 1
+  log_backup_count: 7
